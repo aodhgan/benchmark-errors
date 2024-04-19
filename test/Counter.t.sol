@@ -4,8 +4,10 @@ pragma solidity ^0.8.13;
 import {Test, console} from "forge-std/Test.sol";
 import {NewError} from "../src/NewError.sol";
 import {OldError} from "../src/OldError.sol";
+import "../src/Constants.sol";
 
-contract CounterTest is Test {
+
+contract ErrorTest is Test {
     NewError public newErrorContract;
     OldError public oldErrorContract;   
 
@@ -15,7 +17,7 @@ contract CounterTest is Test {
     }
 
     function test_NewError() public {
-        vm.expectRevert(NewError.Error1.selector);
+        vm.expectRevert(Error1.selector);
         newErrorContract.newErrorType(0);
     }
 
