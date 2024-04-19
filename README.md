@@ -1,3 +1,23 @@
+# Results   
+## With Optimizer 10000 runs
+| Contract | Size (B) | Margin (B) |
+|----------|----------|------------|
+| NewError |      200 |     24,376 |
+| OldError |      252 |     24,324 |
+
+## With Optimizer 200 runs
+| Contract | Size (B) | Margin (B) |
+|----------|----------|------------|
+| NewError |      175 |     24,401 |
+| OldError |      203 |     24,373 |
+
+## With Via-IR
+| Contract | Size (B) | Margin (B) |
+|----------|----------|------------|
+| NewError |      139 |     24,437 |
+| OldError |      167 |     24,409 |
+
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
