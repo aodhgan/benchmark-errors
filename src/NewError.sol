@@ -6,7 +6,7 @@ import "./Constants.sol";
 contract NewError {
     
 
-    function newErrorType(uint256 newNumber) public {
+    function newErrorType(uint256 newNumber) public pure {
         if (newNumber == 0) {
             revert Error1();
         }
