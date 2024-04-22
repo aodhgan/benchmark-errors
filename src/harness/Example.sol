@@ -2,11 +2,15 @@
 pragma solidity ^0.8.13;
 
 import {console} from "forge-std/Test.sol";
-import {Ownable} from "forge-std/Ownable.sol";
+import {Ownable} from "../../lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract Token is Ownable {
 
-    function mint() public {
+    constructor() Ownable(msg.sender) {
+    }
+
+
+    function mint() external virtual onlyOwner {
         _mint();
     }   
 
@@ -17,7 +21,7 @@ contract Token is Ownable {
 }
 
 contract TokenHarness is Token {
-    function mint() public {
+    function mint() external override {
         _mint();
     }
 }
