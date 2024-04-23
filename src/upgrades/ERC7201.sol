@@ -17,7 +17,7 @@ contract ExampleV1 {
             $.slot := MAIN_STORAGE_LOCATION
         }
     }
-
+    
     function _getXTimesY() internal view returns (uint256) {
         MainStorage storage $ = _getMainStorage();
         return $.x * $.y;
